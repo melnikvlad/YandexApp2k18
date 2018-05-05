@@ -58,8 +58,4 @@ class MainPresenter(val mView: IMainView) {
 
         mDisposable.add(linksDisposable)
     }
-
-    fun onPhotoClick(photo: Photo) {
-
-    }
 }

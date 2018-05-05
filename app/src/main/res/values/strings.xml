@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">YandexImageLibraryApp</string>
+    <string name="photo_size_template">Размер: %1$d Кб</string>
+    <string name="main_title">Все фото</string>
 </resources>

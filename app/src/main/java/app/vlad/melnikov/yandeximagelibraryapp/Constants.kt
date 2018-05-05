@@ -13,5 +13,8 @@ class Constants {
         val CONTENT_TYPE_VALUE = "application/x-www-form-urlencoded"
         val AUTH_TYPE_HEADER = "Authorization"
         val AUTH_TYPE_VALUE = "OAuth AQAAAAAjgYLcAADLW7zC8FA_s0wvnF-pA7nlf04"
+
+        val PHOTO_PARCELABLE = "PhotoObject"
+        val BUNDLE = "Bundle"
     }
 }
