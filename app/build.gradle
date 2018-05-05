@@ -50,7 +50,7 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
     //Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.6.0-SNAPSHOT'
 
     //ZoomingImageView
     implementation 'com.jsibbold:zoomage:1.1.0'
