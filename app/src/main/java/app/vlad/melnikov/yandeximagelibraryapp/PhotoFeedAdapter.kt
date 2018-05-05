@@ -11,7 +11,6 @@ import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.holder_photo.view.*
 
-
 class PhotoFeedAdapter(val context: Context, private var list: ArrayList<Photo>, val clickListener: (Photo) -> Unit) : RecyclerView.Adapter<PhotoFeedAdapter.ViewHolder>() {
     private var filteredList: ArrayList<Photo> = list
 
@@ -36,8 +35,7 @@ class PhotoFeedAdapter(val context: Context, private var list: ArrayList<Photo>,
             progress.visibility = View.VISIBLE
             if (!item.loading) {
                 Picasso.with(context)
-                        .load(item.link)
-                        .networkPolicy(NetworkPolicy.OFFLINE)
+                        .load(item.path)
                         .into(imageHolder, object : Callback {
                             override fun onSuccess() {
                                 progress.visibility = View.GONE
@@ -75,8 +73,8 @@ class PhotoFeedAdapter(val context: Context, private var list: ArrayList<Photo>,
         notifyItemInserted(filteredList.size - 1)
     }
 
-    fun loadPhoto(position: Int, link: Link?) {
-        filteredList.get(position).link = link!!.href
+    fun loadPhoto(position: Int?, link: Link?) {
+        filteredList.get(position!!).path = link!!.href
         filteredList.get(position).loading = false
         notifyItemChanged(position)
     }
