@@ -1,12 +1,9 @@
 package app.vlad.melnikov.yandeximagelibraryapp
 
-import android.content.Intent
 import io.reactivex.Observable
-import io.reactivex.Observer
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class MainPresenter(val mView: IMainView) {
@@ -16,15 +13,20 @@ class MainPresenter(val mView: IMainView) {
 
     }
 
-    fun onResume() {
-        getPhotos(Constants.ROOT)
+    fun getPhotos() {
+        fetchPhotos(Constants.ROOT)
     }
 
     fun onDestroy() {
         mDisposable.clear()
     }
 
-    private fun getPhotos(path: String) {
+    fun reload() {
+        mView.clearPreviousResults()
+        fetchPhotos(Constants.ROOT)
+    }
+
+    private fun fetchPhotos(path: String) {
         val photosDisposable = ApiManager.createWithToken(true)
                 .fetchDisk(path)
                 .subscribeOn(Schedulers.io())
@@ -41,7 +43,7 @@ class MainPresenter(val mView: IMainView) {
 
     private fun checkType(item: Item) {
         if (item.type.equals(Constants.TYPE_DIR)) {
-            getPhotos(item.path)
+            fetchPhotos(item.path)
         } else if (item.type.equals(Constants.TYPE_FILE) && item.mime_type.startsWith(Constants.MIME_TYPE_IMAGE)) {
             mView.initAdapterWith(Photo(item.path, item.name, item.size, true))
         }

@@ -58,4 +58,5 @@ dependencies {
 
     //ZoomingImageView
     implementation 'com.jsibbold:zoomage:1.1.0'
+    implementation 'com.android.support:design:27.1.1'
 }

@@ -9,7 +9,9 @@
     </style>
 
     <style name="AppTheme.BlackAccent">
-        <item name="colorAccent">@android:color/white</item> <!-- Whatever color you want-->
+        <item name="colorAccent">@android:color/black</item> <!-- Whatever color you want-->
     </style>
+
+
 
 </resources>
