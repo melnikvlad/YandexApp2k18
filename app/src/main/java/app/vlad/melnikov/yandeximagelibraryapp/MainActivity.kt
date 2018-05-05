@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 class MainActivity : AppCompatActivity(), IMainView {
 
     private lateinit var mPresenter: MainPresenter
-    
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
