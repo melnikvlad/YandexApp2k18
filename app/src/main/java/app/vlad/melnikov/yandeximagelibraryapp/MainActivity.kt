@@ -11,7 +11,6 @@ import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_options.*
 
-
 class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickListener {
     private var mPresenter: MainPresenter? = null
     private var mPhotoAdapter: PhotoFeedAdapter? = null
@@ -32,11 +31,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
         fab_options.setOnClickListener(this)
         fab_reload.setOnClickListener(this)
         fab_search.setOnClickListener(this)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        mPresenter?.onStart()
+        fab_upload.setOnClickListener(this)
     }
 
     override fun onDestroy() {
@@ -71,7 +66,12 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
             fab_options.id -> viewOptions()
             fab_reload.id -> mPresenter?.reload()
             fab_search.id -> viewSearchField()
+            fab_upload.id -> openUploadActivity()
         }
+    }
+
+    private fun openUploadActivity() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     private fun initPhotoCount(itemCount: Int?) {
@@ -99,19 +99,29 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
     private fun viewOptions() {
         val slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_anim)
         val slideOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_anim)
+        val countSlideUp = AnimationUtils.loadAnimation(this, R.anim.slide_anim_count_in)
+        val countSlideOut = AnimationUtils.loadAnimation(this, R.anim.slide_anim_count_out)
         if (fab_reload.visibility == View.INVISIBLE && fab_search.visibility == View.INVISIBLE) {
             fab_options.setImageResource( R.mipmap.ic_clear_black_24dp)
             fab_reload.visibility = View.VISIBLE
             fab_search.visibility = View.VISIBLE
+            fab_upload.visibility = View.VISIBLE
             fab_reload.startAnimation(slideUp)
             fab_search.startAnimation(slideUp)
+            fab_upload.startAnimation(slideUp)
+            text_photo_count.startAnimation(countSlideOut)
+            text_photo_count.visibility = View.INVISIBLE
         } else {
             fab_options.setImageResource( R.mipmap.ic_more_horiz_black_24dp)
             fab_reload.visibility = View.INVISIBLE
             fab_search.visibility = View.INVISIBLE
+            fab_upload.visibility = View.INVISIBLE
+            text_photo_count.visibility = View.VISIBLE
             input_search.visibility = View.GONE
             fab_reload.startAnimation(slideOut)
             fab_search.startAnimation(slideOut)
+            fab_upload.startAnimation(slideOut)
+            text_photo_count.startAnimation(countSlideUp)
         }
     }
 

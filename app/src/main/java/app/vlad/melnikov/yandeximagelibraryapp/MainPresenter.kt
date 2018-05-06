@@ -9,10 +9,6 @@ import io.reactivex.schedulers.Schedulers
 class MainPresenter(val mView: IMainView) {
     private val mDisposable = CompositeDisposable()
 
-    fun onStart() {
-
-    }
-
     fun getPhotos() {
         fetchPhotos(Constants.ROOT)
     }
