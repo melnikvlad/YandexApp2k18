@@ -1,4 +1,8 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.presenter
+
+import app.vlad.melnikov.yandeximagelibraryapp.model.Photo
+import app.vlad.melnikov.yandeximagelibraryapp.utils.Constants
+import app.vlad.melnikov.yandeximagelibraryapp.view.IPhotoView
 
 class PhotoPresenter(val mView: IPhotoView) {
 

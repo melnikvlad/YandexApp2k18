@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.utils
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.Interceptor

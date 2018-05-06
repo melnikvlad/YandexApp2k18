@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.ui.adapter
 
 import android.content.Context
 import android.graphics.Color
@@ -6,8 +6,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import app.vlad.melnikov.yandeximagelibraryapp.R
+import app.vlad.melnikov.yandeximagelibraryapp.model.Link
+import app.vlad.melnikov.yandeximagelibraryapp.model.Photo
 import com.squareup.picasso.Callback
-import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.holder_photo.view.*
 

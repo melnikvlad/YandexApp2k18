@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.utils
 
 class Constants {
     companion object {

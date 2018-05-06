@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.model
 
 data class DiskResponse(val _embedded: Embedded)
 

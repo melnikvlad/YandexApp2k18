@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.animation.AnimationUtils
+import app.vlad.melnikov.yandeximagelibraryapp.*
+import app.vlad.melnikov.yandeximagelibraryapp.model.Link
+import app.vlad.melnikov.yandeximagelibraryapp.model.Photo
+import app.vlad.melnikov.yandeximagelibraryapp.presenter.MainPresenter
+import app.vlad.melnikov.yandeximagelibraryapp.ui.adapter.PhotoFeedAdapter
+import app.vlad.melnikov.yandeximagelibraryapp.utils.Constants
+import app.vlad.melnikov.yandeximagelibraryapp.view.IMainView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_options.*
 
@@ -102,7 +109,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
         val countSlideUp = AnimationUtils.loadAnimation(this, R.anim.slide_anim_count_in)
         val countSlideOut = AnimationUtils.loadAnimation(this, R.anim.slide_anim_count_out)
         if (fab_reload.visibility == View.INVISIBLE && fab_search.visibility == View.INVISIBLE) {
-            fab_options.setImageResource( R.mipmap.ic_clear_black_24dp)
+            fab_options.setImageResource(R.mipmap.ic_clear_black_24dp)
             fab_reload.visibility = View.VISIBLE
             fab_search.visibility = View.VISIBLE
             fab_upload.visibility = View.VISIBLE
@@ -112,7 +119,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
             text_photo_count.startAnimation(countSlideOut)
             text_photo_count.visibility = View.INVISIBLE
         } else {
-            fab_options.setImageResource( R.mipmap.ic_more_horiz_black_24dp)
+            fab_options.setImageResource(R.mipmap.ic_more_horiz_black_24dp)
             fab_reload.visibility = View.INVISIBLE
             fab_search.visibility = View.INVISIBLE
             fab_upload.visibility = View.INVISIBLE

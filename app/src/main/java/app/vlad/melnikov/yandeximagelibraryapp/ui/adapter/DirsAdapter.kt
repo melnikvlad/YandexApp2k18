@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.ui.adapter
 
 import android.content.Context
 import android.support.constraint.ConstraintLayout
@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import app.vlad.melnikov.yandeximagelibraryapp.R
+import app.vlad.melnikov.yandeximagelibraryapp.model.Folder
 import kotlinx.android.synthetic.main.holder_dir.view.*
 
 class DirsAdapter(val context: Context, private var list: ArrayList<Folder>, val clickListener: (Folder) -> Unit) : RecyclerView.Adapter<DirsAdapter.ViewHolder>() {
@@ -14,14 +16,14 @@ class DirsAdapter(val context: Context, private var list: ArrayList<Folder>, val
     var mSelected: Int = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return DirsAdapter.ViewHolder(LayoutInflater.from(context).inflate(R.layout.holder_dir, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.holder_dir, parent, false))
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
 
-    override fun onBindViewHolder(holder: DirsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(context, list.get(holder.adapterPosition))
         holder.card.setOnClickListener({
             clickListener(list.get(holder.adapterPosition))

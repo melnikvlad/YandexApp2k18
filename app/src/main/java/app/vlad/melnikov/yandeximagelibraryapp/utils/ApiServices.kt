@@ -1,5 +1,7 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.utils
 
+import app.vlad.melnikov.yandeximagelibraryapp.model.DiskResponse
+import app.vlad.melnikov.yandeximagelibraryapp.model.Link
 import io.reactivex.Observable
 import io.reactivex.Single
 import okhttp3.ResponseBody

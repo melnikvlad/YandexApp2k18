@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.ui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -6,6 +6,11 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import app.vlad.melnikov.yandeximagelibraryapp.*
+import app.vlad.melnikov.yandeximagelibraryapp.model.Folder
+import app.vlad.melnikov.yandeximagelibraryapp.presenter.UploadPresenter
+import app.vlad.melnikov.yandeximagelibraryapp.ui.adapter.DirsAdapter
+import app.vlad.melnikov.yandeximagelibraryapp.view.IUploadView
 import kotlinx.android.synthetic.main.activity_upload.*
 
 class UploadActivity : AppCompatActivity(), IUploadView, View.OnClickListener {

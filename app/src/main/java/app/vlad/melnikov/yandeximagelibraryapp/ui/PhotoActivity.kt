@@ -1,10 +1,14 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.ui
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import app.vlad.melnikov.yandeximagelibraryapp.utils.Constants
+import app.vlad.melnikov.yandeximagelibraryapp.view.IPhotoView
+import app.vlad.melnikov.yandeximagelibraryapp.presenter.PhotoPresenter
+import app.vlad.melnikov.yandeximagelibraryapp.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_photo.*
 

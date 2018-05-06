@@ -1,4 +1,4 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

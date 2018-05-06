@@ -1,4 +1,6 @@
-package app.vlad.melnikov.yandeximagelibraryapp
+package app.vlad.melnikov.yandeximagelibraryapp.view
+
+import app.vlad.melnikov.yandeximagelibraryapp.model.Folder
 
 interface IUploadView {
     fun addDirToAdapter(folder: Folder)
