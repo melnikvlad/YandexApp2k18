@@ -3,6 +3,8 @@ package app.vlad.melnikov.yandeximagelibraryapp
 class Constants {
     companion object {
         val PHOTOS_IN_ROW = 2
+        val DEEP_LVL_TOP = 0
+        val DEEP_LVL_CHILD = -1
         val ROOT = "/"
         val TYPE_DIR = "dir"
         val TYPE_FILE = "file"
@@ -16,5 +18,6 @@ class Constants {
 
         val PHOTO_PARCELABLE = "PhotoObject"
         val BUNDLE = "Bundle"
+
     }
 }

@@ -16,7 +16,9 @@ class ApiManager {
             return OkHttpClient.Builder().addInterceptor(object : Interceptor {
                 override fun intercept(chain: Interceptor.Chain?): Response {
                     val originalRequest = chain?.request()
-                    val builder = originalRequest?.newBuilder()?.header(Constants.CONTENT_TYPE_HEADER, Constants.CONTENT_TYPE_VALUE)
+                    val builder = originalRequest?.newBuilder()
+                            ?.header(Constants.CONTENT_TYPE_HEADER, Constants.CONTENT_TYPE_VALUE)
+                            ?.header("Accept-Charset", "utf-8")
 
                     if (withToken) {
                         builder?.header(Constants.AUTH_TYPE_HEADER, Constants.AUTH_TYPE_VALUE)

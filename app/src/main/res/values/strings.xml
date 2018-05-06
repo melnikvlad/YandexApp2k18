@@ -3,4 +3,6 @@
     <string name="photo_size_template">Размер: %1$d Кб</string>
     <string name="photo_count_template">Фотографий: %1$d</string>
     <string name="main_title">Все фото</string>
+    <string name="upload_title">Загрузить по URL</string>
+    <string name="sended">Файл успешно опубликован</string>
 </resources>

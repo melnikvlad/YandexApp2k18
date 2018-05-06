@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
 
         mPresenter?.getPhotos()
 
-        input_search.addTextChangedListener(this)
+        input_url.addTextChangedListener(this)
         fab_options.setOnClickListener(this)
         fab_reload.setOnClickListener(this)
         fab_search.setOnClickListener(this)
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
     }
 
     private fun openUploadActivity() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        startActivity(Intent(this, UploadActivity::class.java))
     }
 
     private fun initPhotoCount(itemCount: Int?) {
@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
             fab_search.visibility = View.INVISIBLE
             fab_upload.visibility = View.INVISIBLE
             text_photo_count.visibility = View.VISIBLE
-            input_search.visibility = View.GONE
+            input_url.visibility = View.GONE
             fab_reload.startAnimation(slideOut)
             fab_search.startAnimation(slideOut)
             fab_upload.startAnimation(slideOut)
@@ -126,10 +126,10 @@ class MainActivity : AppCompatActivity(), IMainView, TextWatcher, View.OnClickLi
     }
 
     private fun viewSearchField() {
-        if (input_search.visibility == View.VISIBLE) {
-            input_search.visibility = View.GONE
+        if (input_url.visibility == View.VISIBLE) {
+            input_url.visibility = View.GONE
         } else {
-            input_search.visibility = View.VISIBLE
+            input_url.visibility = View.VISIBLE
         }
     }
 

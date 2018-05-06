@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PhotoActivity"/>
+        <activity android:name=".UploadActivity"/>
     </application>
 
 </manifest>
