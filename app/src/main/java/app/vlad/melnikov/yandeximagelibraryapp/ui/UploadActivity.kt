@@ -13,6 +13,7 @@ import app.vlad.melnikov.yandeximagelibraryapp.ui.adapter.DirsAdapter
 import app.vlad.melnikov.yandeximagelibraryapp.view.IUploadView
 import kotlinx.android.synthetic.main.activity_upload.*
 
+
 class UploadActivity : AppCompatActivity(), IUploadView, View.OnClickListener {
     private var mPresenter: UploadPresenter? = null
     private var mDirsAdapter: DirsAdapter? = null

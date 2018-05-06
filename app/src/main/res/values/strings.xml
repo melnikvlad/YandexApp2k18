@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">YandexImageLibraryApp</string>
-    <string name="photo_size_template">Размер: %1$d Кб</string>
-    <string name="photo_count_template">Фотографий: %1$d</string>
-    <string name="main_title">Все фото</string>
-    <string name="upload_title">Загрузить по URL</string>
-    <string name="sended">Файл успешно опубликован</string>
+    <string name="photo_size_template">Memory: %1$d Kb</string>
+    <string name="photo_count_template">Photos: %1$d</string>
+    <string name="main_title">All photos</string>
+    <string name="upload_title">Load with URL</string>
+    <string name="sended">FIle uploaded successfully</string>
+    <string name="hint_search">Name or type of photo…</string>
+    <string name="hint_upload">URL address</string>
 </resources>
